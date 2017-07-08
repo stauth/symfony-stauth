@@ -23,18 +23,11 @@ stauth_protection:
     resource: "@StauthProtectionBundle/Resources/config/routing.yml"
 ```
 
-Add stauth access token to `parameteres.yml`:
-
-```yaml
-stauth.access_token: 'eyJkkk40eXAiOiJsdvk3k43krKV1QiLCJ...'
-```
-
-
 Initialize Bundle in `AppKernel.php`:
 
 ```php
 
-        if ($this->getEnvironment() !== ['prod') {
+        if ($this->getEnvironment() !== 'prod') {
             // ...
             $bundles[] = new Stauth\StauthProtectionBundle();
         }
@@ -42,20 +35,13 @@ Initialize Bundle in `AppKernel.php`:
 
 ### Production
 
-If you don't mind Stauth service provider being executed at production environment, or you want to protect your production env, import routes in `app/routing.yml`
+If you don't mind Stauth service provider being executed at production environment, or you want to protect your production app, import routes in `app/routing.yml`
 
 ```yaml
 # stauth protection
 stauth_protection:
     resource: "@StauthProtectionBundle/Resources/config/routing.yml"
 ```
-
-Add stauth access token to `parameteres.yml`:
-
-```yaml
-stauth.access_token: 'eyJkkk40eXAiOiJsdvk3k43krKV1QiLCJ...'
-```
-
 
 Initialize Bundle in `AppKernel.php`:
 
@@ -71,30 +57,16 @@ Initialize Bundle in `AppKernel.php`:
             
 ```
 
-Generate access token at [stauth.io](https://www.stauth.io) and add it as a `STAUTH_ACCESS_TOKEN` param in `.env` file:
+Generate access token at [stauth.io](https://www.stauth.io) and add it to `parameteres.yml`:
 
-```bash
-STAUTH_ACCESS_TOKEN=verylongchainoflettersmixedwithsomerandomnumbers123
-
+```yaml
+stauth.access_token: 'eyJkkk40eXAiOiJsdvk3k43krKV1QiLCJ...'
 ```
 
-By default protected environment is `staging`, in order to change this, add `STAUTH_PROTECTED_ENV` param in `.env` file: 
+By default protected environment is `staging`, in order to change this, add `stauth.protected_env` to `parameters.yml`: 
 
 ```bash
-STAUTH_PROTECTED_ENV=local
-```
-
-## Other
-If you want to know or do more, read below.
-
-### Publish configuration
-
-You can publish configuration and update required params in php file:
-
-```bash
-
-php artisan vendor:publish --provider="Stauth\StauthServiceProvider" --tag=config
-
+stauth.protected_env: 'local'
 ```
 
 ### Cache
