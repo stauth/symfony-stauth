@@ -1,0 +1,8 @@
+services:
+    stauth.protection_listener:
+        class: 'Stauth\EventListener\StauthProtectionListener'
+        calls:
+            - ['setSession', ['@session']]
+            - ['setRouter', ['@router']]
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onRequest }

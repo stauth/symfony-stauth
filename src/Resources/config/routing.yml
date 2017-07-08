@@ -1,0 +1,7 @@
+stauth_protection:
+    path: /stauth/protected
+    defaults: { _controller: StauthProtectionBundle:Protect:restricted }
+
+stauth_authorization:
+    path: /stauth/authorize
+    defaults: { _controller: StauthProtectionBundle:Protect:authorize }

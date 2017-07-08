@@ -1,0 +1,17 @@
+{
+  "name": "stauth/symfony-stauth",
+  "description": "Staging server athorization package, .htaccess alternative",
+  "license": "MIT",
+  "version": "0.0.1",
+  "require": {
+    "guzzlehttp/guzzle": "6.*",
+    "symfony/psr-http-message-bridge": "0.2",
+    "twig/twig": "~1.34|~2.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Stauth\\": "src/"
+    }
+  },
+  "minimum-stability": "dev"
+}
