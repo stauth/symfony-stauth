@@ -1,6 +1,5 @@
-# Laravel Stauth
+# Symfony Stauth
 [![Latest Stable Version](https://poser.pugx.org/stauth/symfony-stauth/version)](https://packagist.org/packages/stauth/symfony-stauth)
-[![Total Downloads](https://poser.pugx.org/stauth/laravel-stauth/downloads)](https://packagist.org/packages/stauth/laravel-stauth)
 [![License](https://poser.pugx.org/stauth/symfony-stauth/license)](https://packagist.org/packages/stauth/symfony-stauth)
 [![composer.lock available](https://poser.pugx.org/stauth/symfony-stauth/composerlock)](https://packagist.org/packages/stauth/symfony-stauth)
 
