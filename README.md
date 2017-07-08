@@ -5,7 +5,6 @@
 
 Staging server athorization package, alternative for .htaccess, register at [stauth.io](https://www.stauth.io/)
 
-
 ## Installation
 
 
